@@ -4,7 +4,8 @@
  
  
   Configuration sample:
- 
+  
+  
   public static class JobSchedulerConfigurator
     {
         public static Container AddScheduledJobs(this Container container, IScheduler scheduler)
@@ -48,6 +49,7 @@
     
     A sample Container Adapter (Funq Container), can be any DI framework
     
+    
     public class QuartzToFunqContainerAdapter:IQuartzContainerAdapter
     {
         private readonly Container container;
@@ -68,9 +70,9 @@
         }
     }
     
-    A Task (Is used instead of a specific Quartz.Net Job. The Generic Quartz.Net Job invokes the async ExecuteAsync methods and Waits ():
+A Task (Is used instead of a specific Quartz.Net Job. The Generic Quartz.Net Job invokes the async ExecuteAsync methods and Waits (similar to a ConsoleHost waiting for a Async Task:
    
-   public class DoSomethingTask : BaseTask
+   public class DoSomethingTask : BaseTask //old style base class - could be interface
     {
         private readonly ILogger logger;//SeriLog sample
         private readonly IMyService service;
