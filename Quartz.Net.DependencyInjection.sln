@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{7E2DC5A0-1312-45E7-86D2-444170174525}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quartz.Net.DependencyInjection", "Quartz.Net.DependencyInjection\Quartz.Net.DependencyInjection.csproj", "{0B8566DF-7BF8-4A1B-8C10-1E876909AE75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quartz.Net.DependencyInjection.Funq", "Samples\Quartz.Net.DependencyInjection.Funq\Quartz.Net.DependencyInjection.Funq.csproj", "{0F2DFB92-0E24-41E4-AC09-A03DB4103116}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B8566DF-7BF8-4A1B-8C10-1E876909AE75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B8566DF-7BF8-4A1B-8C10-1E876909AE75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B8566DF-7BF8-4A1B-8C10-1E876909AE75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B8566DF-7BF8-4A1B-8C10-1E876909AE75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F2DFB92-0E24-41E4-AC09-A03DB4103116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F2DFB92-0E24-41E4-AC09-A03DB4103116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F2DFB92-0E24-41E4-AC09-A03DB4103116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F2DFB92-0E24-41E4-AC09-A03DB4103116}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0F2DFB92-0E24-41E4-AC09-A03DB4103116} = {7E2DC5A0-1312-45E7-86D2-444170174525}
+	EndGlobalSection
+EndGlobal
