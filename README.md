@@ -1,5 +1,6 @@
 ﻿# -Quartz.Net.DependencyInjection
  
+ 
  By using a simple extension/wrapping a Dependency Injection Container is added to Quartz.Net without using the IJobFactory, and with support for Async.
  
  

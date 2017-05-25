@@ -6,29 +6,27 @@ namespace Quartz.Net.DependencyInjection.Funq.DoSomethingSample
 {
     public class DoSomethingTask : BaseTask
     {
+        private readonly IMyService service;
         private readonly ILogger logger;
 
-        public DoSomethingTask(
-            ILogger logger)
+        public DoSomethingTask(IMyService service,ILogger logger)
         {
+            this.service = service;
             this.logger = logger;
         }
 
-        public override Task ExecuteAsync()
+        public override async Task ExecuteAsync()
         {
             try
             {
                 logger.Debug("Invoked DoSomethingTask");
-                //    await -> something is beeing done here
+                await service.DoItAsync();
+                logger.Debug("Completed DoSomethingTask");
             }
             catch (Exception ex)
             {
                 logger.Fatal(ex, "Error in DoSomethingTask");
             }
-            logger.Debug("Completed DoSomethingTask");
-
-            //remove this when await is implemented
-            return Task.CompletedTask;
         }
     }
 }

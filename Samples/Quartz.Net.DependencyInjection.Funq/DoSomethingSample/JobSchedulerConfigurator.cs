@@ -7,30 +7,33 @@ namespace Quartz.Net.DependencyInjection.Funq.DoSomethingSample
 
     public static class JobSchedulerConfigurator
     {
-        public static Container ConfigureScheduledJobs(this Container container, IScheduler scheduler)
+        public static Container AddScheduledJobs(this Container container, IScheduler scheduler)
         {
-            IQuartzContainerAdapter funqContainer = new QuartzToFunqContainerAdapter(container);
-            IDictionary map = JobDependecyExtensions.CreateMap(funqContainer);
+            IQuartzContainerAdapter funqContainer = new QuartzToFunqContainerAdapter(container);    //<--  DI Container wrapper. Can be any
+            IDictionary map = JobDependecyExtensions.CreateMap(funqContainer);                      //<--  stores the container in context
+
             ConfigureDoSomethingJob(funqContainer, scheduler, map);
+
             return container;
         }
 
 
         private static void ConfigureDoSomethingJob(IQuartzContainerAdapter container, IScheduler scheduler, IDictionary map)
         {
-            IJobDetail job = JobBuilder.Create<GenericJob<DoSomethingTask>>()
+            IJobDetail job = JobBuilder.Create<GenericJob<DoSomethingTask>>()   //<--  notice use of GenericJob With a Task
                 .SetJobData(new JobDataMap(map))
                 .WithIdentity("DoSomethingJob", "DoSomethingJobGroup")
-                .WithTask<DoSomethingTask>(container)
+                .WithTask<DoSomethingTask>(container)                           //<--  notice configuration of a Task
                 .Build();
 
-            var interval = (int)TimeSpan.FromSeconds(1).TotalSeconds;
+            scheduler.StartDelayed(TimeSpan.FromMilliseconds(5));
+            var interval = TimeSpan.FromMilliseconds(10);
 
             ITrigger trigger = TriggerBuilder.Create()
                 .WithIdentity("DoSomethingJobTrigger", "DoSomethingJobGroup")
                 .StartNow()
                 .WithSimpleSchedule(x => x
-                        .WithIntervalInSeconds(interval)
+                        .WithInterval(interval)
                         .RepeatForever()
                 )
                 .Build();
