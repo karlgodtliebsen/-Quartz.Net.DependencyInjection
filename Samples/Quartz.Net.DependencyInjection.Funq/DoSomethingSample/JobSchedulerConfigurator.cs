@@ -20,15 +20,15 @@ namespace Quartz.Net.DependencyInjection.Funq.DoSomethingSample
 
         private static void ConfigureDoSomethingJob(IQuartzContainerAdapter container, IScheduler scheduler, IDictionary map)
         {
+            scheduler.StartDelayed(TimeSpan.FromMilliseconds(5));
+            var interval = TimeSpan.FromMilliseconds(10);
+
             IJobDetail job = JobBuilder.Create<GenericJob<DoSomethingTask>>()   //<--  notice use of GenericJob With a Task
                 .SetJobData(new JobDataMap(map))
                 .WithIdentity("DoSomethingJob", "DoSomethingJobGroup")
                 .WithTask<DoSomethingTask>(container)                           //<--  notice configuration of a Task
                 .Build();
-
-            scheduler.StartDelayed(TimeSpan.FromMilliseconds(5));
-            var interval = TimeSpan.FromMilliseconds(10);
-
+            
             ITrigger trigger = TriggerBuilder.Create()
                 .WithIdentity("DoSomethingJobTrigger", "DoSomethingJobGroup")
                 .StartNow()

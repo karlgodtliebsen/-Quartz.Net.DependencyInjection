@@ -2,8 +2,8 @@ using System.Threading.Tasks;
 
 namespace Quartz.Net.DependencyInjection
 {
-    public abstract class BaseTask
+    public interface IQuartzTask
     {
-        public abstract Task ExecuteAsync();
+        Task ExecuteAsync();
     }
 }

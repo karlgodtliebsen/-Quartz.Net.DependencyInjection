@@ -3,7 +3,7 @@
 namespace Quartz.Net.DependencyInjection
 {
         
-    public class GenericJob<T> : IJob where T: BaseTask
+    public class GenericJob<T> : IJob where T: IQuartzTask
     {
         [DebuggerStepThrough]
         public void Execute(IJobExecutionContext context)

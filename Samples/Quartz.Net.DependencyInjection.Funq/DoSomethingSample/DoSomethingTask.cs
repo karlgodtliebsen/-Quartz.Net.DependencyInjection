@@ -4,7 +4,7 @@ using Serilog;
 
 namespace Quartz.Net.DependencyInjection.Funq.DoSomethingSample
 {
-    public class DoSomethingTask : BaseTask
+    public class DoSomethingTask : IQuartzTask
     {
         private readonly IMyService service;
         private readonly ILogger logger;
@@ -15,7 +15,7 @@ namespace Quartz.Net.DependencyInjection.Funq.DoSomethingSample
             this.logger = logger;
         }
 
-        public override async Task ExecuteAsync()
+        public async Task ExecuteAsync()
         {
             try
             {

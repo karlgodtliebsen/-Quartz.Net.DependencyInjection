@@ -41,9 +41,9 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseTask.cs" />
     <Compile Include="GenericJob.cs" />
     <Compile Include="IQuartzContainerAdapter.cs" />
+    <Compile Include="IQuartzTask.cs" />
     <Compile Include="JobDependecyExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
