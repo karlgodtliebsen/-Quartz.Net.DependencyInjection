@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quartz.Net.DependencyInject
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quartz.Net.DependencyInjection.Funq", "Samples\Quartz.Net.DependencyInjection.Funq\Quartz.Net.DependencyInjection.Funq.csproj", "{0F2DFB92-0E24-41E4-AC09-A03DB4103116}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quartz.Net.DependencyInjection.3.0", "Quartz.Net.DependencyInjection.3.0\Quartz.Net.DependencyInjection.3.0.csproj", "{99038BB4-17DD-47FF-B2C3-393DB1867843}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quartz.Net.DependencyInjection.Funq.3.0", "Quartz.Net.DependencyInjection.Funq.3.0\Quartz.Net.DependencyInjection.Funq.3.0.csproj", "{2349710A-0949-431F-AE1B-31074EA63711}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,11 +27,20 @@ Global
 		{0F2DFB92-0E24-41E4-AC09-A03DB4103116}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F2DFB92-0E24-41E4-AC09-A03DB4103116}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F2DFB92-0E24-41E4-AC09-A03DB4103116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99038BB4-17DD-47FF-B2C3-393DB1867843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99038BB4-17DD-47FF-B2C3-393DB1867843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99038BB4-17DD-47FF-B2C3-393DB1867843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99038BB4-17DD-47FF-B2C3-393DB1867843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2349710A-0949-431F-AE1B-31074EA63711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2349710A-0949-431F-AE1B-31074EA63711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2349710A-0949-431F-AE1B-31074EA63711}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2349710A-0949-431F-AE1B-31074EA63711}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0F2DFB92-0E24-41E4-AC09-A03DB4103116} = {7E2DC5A0-1312-45E7-86D2-444170174525}
+		{2349710A-0949-431F-AE1B-31074EA63711} = {7E2DC5A0-1312-45E7-86D2-444170174525}
 	EndGlobalSection
 EndGlobal
